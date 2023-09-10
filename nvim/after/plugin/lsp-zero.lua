@@ -19,7 +19,8 @@ lsp.ensure_installed({
      'lua_ls',
      'eslint',
      'gopls',
-     'prismals'
+     'prismals',
+     'clangd',
 })
 
 -- Fix Undefined global 'vim'
