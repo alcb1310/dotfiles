@@ -1,11 +1,12 @@
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
      sudo pacman -S alacritty neovim tmux
+     yay -S ttf-font-nerd
      bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
      mv ~/.bashrc ~/.bashrc.old
      ln -s ~/.dotfiles/.bashrc ~/.bashrc
-elif [[ "$OSTYPE" == "darwin" ]]; then
+elif [[ "$OSTYPE" == "darwin"* ]]; then
      /bin/bash -c "$(curl fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-     brew install --cask alacritty
+     brew install --cask alacritty font-hack-nerd-font
      brew install neovim tmux
 fi
 
