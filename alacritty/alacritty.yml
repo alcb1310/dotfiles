@@ -1,0 +1,28 @@
+window:
+  title: Term-Alacritty
+
+  opacity: 0.9
+
+  startup_mode: Maximized
+
+  font:
+    size: 6
+    offset:
+      x: 0
+      y: 0
+    normal:
+      # family: Ubuntu Mono
+      family: Hack
+      style: Regular
+    bold:
+      # family: Ubuntu Mono
+      family: Hack
+      style: Bold
+    italic:
+      # family: Ubuntu Mono
+      family: Hack
+      style: Italic
+    bold_italic:
+      # family: Ubuntu Mono
+      family: Hack
+      style: Bold Italic
