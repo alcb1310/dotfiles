@@ -1,7 +1,7 @@
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-     sudo pacman -S alacritty neovim tmux
+     sudo pacman -S alacritty neovim tmux ripgrep
      yay -S ttf-font-nerd
      bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
      mv ~/.bashrc ~/.bashrc.old
