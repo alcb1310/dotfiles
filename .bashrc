@@ -144,3 +144,4 @@ alias vim=nvim
 export PATH="$HOME/.config/tmux/plugins/tmuxifier/bin:$PATH"
 
 # neofetch
+source /usr/share/nvm/init-nvm.sh
