@@ -11,7 +11,16 @@ local M = {
           vim.keymap.set("n", "<leader>e", function() ui.nav_file(2) end)
           vim.keymap.set("n", "<leader>y", function() ui.nav_file(3) end)
           vim.keymap.set("n", "<leader>t", function() ui.nav_file(4) end)
-     end
+     end,
+     lazy = true,
+     keys = {
+          "<leader>a",
+          "<C-e>",
+          "<leader>h",
+          "<leader>e",
+          "<leader>y",
+          "<leader>t",
+     }
 }
 
 return M
