@@ -10,12 +10,16 @@ local M = {
           ---LHS of toggle mappings in NORMAL mode
           toggler = {
                ---Line-comment toggle keymap
-               line = 'cc',
+               line = 'gcc',
                ---Block-comment toggle keymap
-               block = 'bb',
+               block = 'gbb',
           },
      },
-     lazy = false,
+     lazy = true,
+     keys = {
+          "gcc",
+          "gbb"
+     }
 }
 
 return M
