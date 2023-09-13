@@ -46,3 +46,8 @@ vim.keymap.set("n", "<C-h>", vim.cmd.TmuxNavigateLeft)
 vim.keymap.set("n", "<C-j>", vim.cmd.TmuxNavigateDown)
 vim.keymap.set("n", "<C-k>", vim.cmd.TmuxNavigateUp)
 vim.keymap.set("n", "<C-l>", vim.cmd.TmuxNavigatePrevious)
+
+vim.keymap.set("n", "<leader>prc", ":Octo pr create<CR>", { silent = true })
+vim.keymap.set("n", "<leader>prl", ":Octo pr list<CR>", { silent = true })
+vim.keymap.set("n", "<leader>gic", ":Octo issue create<CR>", { silent = true })
+vim.keymap.set("n", "<leader>gil", ":Octo issue list<CR>", { silent = true })
