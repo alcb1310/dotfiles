@@ -15,6 +15,15 @@ return require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
     use 'shaunsingh/nord.nvim'
     use({ 'rose-pine/neovim', as = 'rose-pine' })
+
+    use {
+        'nvim-telescope/telescope.nvim', tag = '0.1.3',
+        -- or                            , branch = '0.1.x',
+        requires = {
+            {'nvim-lua/plenary.nvim'},
+            {'nvim-tree/nvim-web-devicons'}
+        }
+    }
 	-- My plugins here
 	-- use 'foo1/bar1.nvim'
 	-- use 'foo2/bar2.nvim'
