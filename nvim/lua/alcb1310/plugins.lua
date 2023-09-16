@@ -24,6 +24,8 @@ return require('packer').startup(function(use)
             {'nvim-tree/nvim-web-devicons'}
         }
     }
+
+    use 'tpope/vim-fugitive'
 	-- My plugins here
 	-- use 'foo1/bar1.nvim'
 	-- use 'foo2/bar2.nvim'
