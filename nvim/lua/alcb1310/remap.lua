@@ -51,3 +51,9 @@ vim.keymap.set("n", "<leader>prc", ":Octo pr create<CR>", { silent = true })
 vim.keymap.set("n", "<leader>prl", ":Octo pr list<CR>", { silent = true })
 vim.keymap.set("n", "<leader>gic", ":Octo issue create<CR>", { silent = true })
 vim.keymap.set("n", "<leader>gil", ":Octo issue list<CR>", { silent = true })
+
+vim.keymap.set("n", "<leader>at", function()
+     if vim.bo.filetype == 'go' then
+          vim.cmd('GoAddTags')
+     end
+end, { silent = true })
