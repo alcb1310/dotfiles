@@ -42,3 +42,9 @@ vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
 
+
+vim.keymap.set("n", "<leader>at", function ()
+    if vim.bo.filetype == 'go' then
+        vim.cmd('GoAddTags')
+    end
+end, { silent = true })
