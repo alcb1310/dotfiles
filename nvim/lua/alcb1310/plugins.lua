@@ -13,6 +13,8 @@ local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
+    use 'shaunsingh/nord.nvim'
+    use({ 'rose-pine/neovim', as = 'rose-pine' })
 	-- My plugins here
 	-- use 'foo1/bar1.nvim'
 	-- use 'foo2/bar2.nvim'
