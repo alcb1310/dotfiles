@@ -15,6 +15,9 @@ return require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
     use 'shaunsingh/nord.nvim'
     use({ 'rose-pine/neovim', as = 'rose-pine' })
+    use 'neovim/nvim-lspconfig'
+    use 'williamboman/mason.nvim'
+    use 'williamboman/mason-lspconfig.nvim'
 
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.3',
