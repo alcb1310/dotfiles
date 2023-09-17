@@ -1,5 +1,7 @@
 local M = {
-     "fatih/vim-go"
+     "fatih/vim-go",
+     lazy = true,
+     ft = { "go" },
 }
 
 return M

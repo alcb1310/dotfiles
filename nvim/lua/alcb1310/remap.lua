@@ -11,6 +11,7 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
+vim.keymap.set("n", "G", "Gzzzv")
 --
 -- greatest remap ever
 vim.keymap.set("x", "<leader>p", [["_dP]])
@@ -51,9 +52,3 @@ vim.keymap.set("n", "<leader>prc", ":Octo pr create<CR>", { silent = true })
 vim.keymap.set("n", "<leader>prl", ":Octo pr list<CR>", { silent = true })
 vim.keymap.set("n", "<leader>gic", ":Octo issue create<CR>", { silent = true })
 vim.keymap.set("n", "<leader>gil", ":Octo issue list<CR>", { silent = true })
-
-vim.keymap.set("n", "<leader>at", function()
-     if vim.bo.filetype == 'go' then
-          vim.cmd('GoAddTags')
-     end
-end, { silent = true })
