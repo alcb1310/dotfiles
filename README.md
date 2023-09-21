@@ -10,4 +10,4 @@ With this dotfiles I am configuring the following programs:
 
 Also it has some scripts to install `GO` and `PostgreSQL` to an ArchLinux operating system
 
-<!-- TODO improve the readme -->
+<!-- TODO: improve the readme -->
