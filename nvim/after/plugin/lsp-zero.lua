@@ -1,4 +1,7 @@
 local lsp = require("lsp-zero")
+require("neodev").setup({
+     library = { plugins = { "nvim-dap-ui" }, types = true },
+})
 local augroup = vim.api.nvim_create_augroup('LspFormatting', {})
 
 lsp.preset("recommended")
@@ -78,4 +81,8 @@ lsp.setup()
 
 vim.diagnostic.config({
      virtual_text = true
+})
+
+require("neodev").setup({
+     library = { plugins = { "nvim-dap-ui" }, types = true },
 })
