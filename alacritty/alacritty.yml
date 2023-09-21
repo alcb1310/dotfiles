@@ -10,6 +10,8 @@
 # to the user's home directory starting with `~/`.
 #import:
 #  - /path/to/alacritty.yml
+import:
+  - ~/.config/alacritty/themes/themes/material_theme.yaml
 
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
@@ -201,11 +203,11 @@ font:
 #draw_bold_text_with_bright_colors: false
 
 # Colors (Tomorrow Night)
-colors:
+# colors:
   # Default colors
-  primary:
-   background: '#1d1f21'
-   foreground: '#c5c8c6'
+  # primary:
+   # background: '#1d1f21'
+   # foreground: '#c5c8c6'
 
     # Bright and dim foreground colors
     #
@@ -250,7 +252,7 @@ colors:
     #  background: '#000000'
 
   # Keyboard hints
-  hints:
+  # hints:
     # First character in the hint label
     #
     # Allowed values are CellForeground/CellBackground, which reference the
@@ -264,8 +266,8 @@ colors:
     # Allowed values are CellForeground/CellBackground, which reference the
     # affected cell, or hexadecimal colors like #ff00ff.
     #end:
-    foreground: '#e9ff5e'
-    background: '#1d1f21'
+    # foreground: '#e9ff5e'
+    # background: '#1d1f21'
 
   # Line indicator
   #
