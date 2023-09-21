@@ -44,3 +44,6 @@ vim.keymap.set("n", "<C-h>", vim.cmd.TmuxNavigateLeft)
 vim.keymap.set("n", "<C-j>", vim.cmd.TmuxNavigateDown)
 vim.keymap.set("n", "<C-k>", vim.cmd.TmuxNavigateUp)
 vim.keymap.set("n", "<C-l>", vim.cmd.TmuxNavigatePrevious)
+
+local lua_command = ":lua require('rest-nvim').run()<cr>"
+vim.api.nvim_set_keymap("n", "<leader>ut", lua_command, { silent = true })
