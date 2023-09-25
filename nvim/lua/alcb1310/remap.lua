@@ -31,6 +31,7 @@ vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
+vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.dotfiles/nvim/.config/nvim/lua/alcb1310/init.lua<CR>");
 
 vim.keymap.set("n", "<leader><leader>", function()
      vim.cmd("so")
@@ -47,3 +48,5 @@ vim.keymap.set("n", "<C-l>", vim.cmd.TmuxNavigatePrevious)
 
 local lua_command = ":lua require('rest-nvim').run()<cr>"
 vim.api.nvim_set_keymap("n", "<leader>ut", lua_command, { silent = true })
+
+vim.keymap.set({ "n", "v", "i" }, "<C-v>", vim.cmd.vsplit, {})
