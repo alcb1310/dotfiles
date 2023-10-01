@@ -18,6 +18,7 @@ return require('packer').startup(function(use)
 	-- use 'foo2/bar2.nvim'
 	use 'tpope/vim-fugitive'
 	use 'projekt0n/caret.nvim'
+	use 'theprimeagen/harpoon'
 
 	use {
 		'nvim-telescope/telescope.nvim', tag = '0.1.3',
