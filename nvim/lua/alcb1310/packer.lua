@@ -20,6 +20,7 @@ return require('packer').startup(function(use)
      use 'christoomey/vim-tmux-navigator'
      use 'nvim-tree/nvim-web-devicons'
      use 'prichrd/netrw.nvim'
+     use 'lewis6991/gitsigns.nvim'
 
      use {
           'nvim-telescope/telescope.nvim', tag = '0.1.3',
