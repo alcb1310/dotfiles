@@ -40,5 +40,8 @@ vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
+local lua_command = ":lua require('rest-nvim').run()<cr>"
+vim.api.nvim_set_keymap("n", "<leader>ut", lua_command, { silent = true })
+
 vim.keymap.set({ "n", "v", "i" }, "<A-v>", vim.cmd.vsplit, {})
 vim.keymap.set({ "n", "v", "i" }, "<A-s>", vim.cmd.split, {})
