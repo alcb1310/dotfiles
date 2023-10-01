@@ -29,6 +29,13 @@ return require('packer').startup(function(use)
 	}
 
 	use ('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
+    use {
+          'folke/noice.nvim',
+          requires = {
+               'MunifTanjim/nui.nvim',
+               'rcarriga/nvim-notify',
+          }
+    }
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
