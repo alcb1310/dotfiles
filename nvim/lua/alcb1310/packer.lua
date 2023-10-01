@@ -19,6 +19,7 @@ return require('packer').startup(function(use)
 	use 'tpope/vim-fugitive'
 	use 'projekt0n/caret.nvim'
 	use 'theprimeagen/harpoon'
+	use 'christoomey/vim-tmux-navigator'
 
 	use {
 		'nvim-telescope/telescope.nvim', tag = '0.1.3',
