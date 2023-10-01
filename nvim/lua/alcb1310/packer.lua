@@ -18,6 +18,12 @@ return require('packer').startup(function(use)
 	-- use 'foo2/bar2.nvim'
 	use 'tpope/vim-fugitive'
 
+	use {
+		'nvim-telescope/telescope.nvim', tag = '0.1.3',
+		-- or                            , branch = '0.1.x',
+		requires = { {'nvim-lua/plenary.nvim'} }
+	}
+
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if packer_bootstrap then
