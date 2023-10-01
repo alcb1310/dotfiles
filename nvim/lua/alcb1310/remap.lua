@@ -49,4 +49,5 @@ vim.keymap.set("n", "<C-l>", vim.cmd.TmuxNavigatePrevious)
 local lua_command = ":lua require('rest-nvim').run()<cr>"
 vim.api.nvim_set_keymap("n", "<leader>ut", lua_command, { silent = true })
 
-vim.keymap.set({ "n", "v", "i" }, "<C-v>", vim.cmd.vsplit, {})
+vim.keymap.set({ "n", "v", "i" }, "<A-v>", vim.cmd.vsplit, {})
+vim.keymap.set({ "n", "v", "i" }, "<A-s>", vim.cmd.split, {})
