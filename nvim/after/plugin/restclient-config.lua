@@ -1,10 +1,10 @@
 require("rest-nvim").setup({
      -- Open request results in a horizontal split
-     result_split_horizontal = false,
+     result_split_horizontal = true,
      -- Keep the http file buffer above|left when split horizontal|vertical
-     result_split_in_place = false,
+     result_split_in_place = true,
      -- Skip SSL verification, useful for unknown certificates
-     skip_ssl_verification = false,
+     skip_ssl_verification = true,
      -- Encode URL before making request
      encode_url = true,
      -- Highlight request on run
@@ -30,7 +30,7 @@ require("rest-nvim").setup({
           },
      },
      -- Jump to request line on run
-     jump_to_request = false,
+     jump_to_request = true,
      env_file = '.env',
      custom_dynamic_variables = {},
      yank_dry_run = true,
