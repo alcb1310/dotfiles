@@ -20,6 +20,7 @@ return require('packer').startup(function(use)
 	use 'projekt0n/caret.nvim'
 	use 'theprimeagen/harpoon'
 	use 'christoomey/vim-tmux-navigator'
+    use 'nvim-tree/nvim-web-devicons'
 
 	use {
 		'nvim-telescope/telescope.nvim', tag = '0.1.3',
