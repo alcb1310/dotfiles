@@ -1,31 +1,35 @@
-  require("noice").setup({
-    cmdline = {
-      format = {
-        cmdline = { icon = ">" },
-        search_down = { icon = "🔍⌄" },
-        search_up = { icon = "🔍⌃" },
-        filter = { icon = "$" },
-        lua = { icon = "☾" },
-        help = { icon = "?" },
-      },
-    },
-    format = {
-      level = {
-        icons = {
-          error = "✖",
-          warn = "▼",
-          info = "●",
-        },
-      },
-    },
-    popupmenu = {
-      kind_icons = false,
-    },
-    inc_rename = {
-      cmdline = {
-        format = {
-          IncRename = { icon = "⟳" }
-        },
-      },
-    },
-  })
+require("noice").setup({
+     cmdline = {
+          format = {
+               cmdline = { icon = ">" },
+               search_down = { icon = "🔍⌄" },
+               search_up = { icon = "🔍⌃" },
+               filter = { icon = "$" },
+               lua = { icon = "☾" },
+               help = { icon = "?" },
+          },
+     },
+     format = {
+          level = {
+               icons = {
+                    error = "✖",
+                    warn = "▼",
+                    info = "●",
+               },
+          },
+     },
+     popupmenu = {
+          kind_icons = false,
+     },
+     inc_rename = {
+          cmdline = {
+               format = {
+                    IncRename = { icon = "⟳" }
+               },
+          },
+     },
+})
+
+require("notify").setup({
+     background_colour = "#9f9f9f",
+})

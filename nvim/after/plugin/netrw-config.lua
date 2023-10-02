@@ -1,1 +1,1 @@
-require'netrw'.setup{}
+require 'netrw'.setup {}

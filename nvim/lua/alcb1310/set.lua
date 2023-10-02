@@ -37,5 +37,3 @@ vim.opt.colorcolumn = "80"
 -- vim.api.nvim_set_hl(0, "LineNr", { fg = "#a6d189", bg = "none"})
 vim.api.nvim_set_hl(0, "LineNr", { fg = "#ca9ee6", bg = "none" })
 -- vim.api.nvim_set_hl(0, "LineNr", { fg = "#33aa55", bg = "none"})
-vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
