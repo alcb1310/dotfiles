@@ -22,6 +22,7 @@ return require('packer').startup(function(use)
      use 'prichrd/netrw.nvim'
      use 'lewis6991/gitsigns.nvim'
      use 'numToStr/Comment.nvim'
+     use 'fatih/vim-go'
 
      use {
           'nvim-telescope/telescope.nvim', tag = '0.1.3',
