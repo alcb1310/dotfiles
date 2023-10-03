@@ -45,3 +45,8 @@ vim.api.nvim_set_keymap("n", "<leader>ut", lua_command, { silent = true })
 
 vim.keymap.set({ "n", "v", "i" }, "<A-v>", vim.cmd.vsplit, {})
 vim.keymap.set({ "n", "v", "i" }, "<A-s>", vim.cmd.split, {})
+
+vim.keymap.set("n", "<leader>gil", ":Octo issue list<cr>", { desc = "List github issues", silent = true })
+vim.keymap.set("n", "<leader>gic", ":Octo issue create<cr>", { desc = "Create github issues", silent = true })
+vim.keymap.set("n", "<leader>prl", ":Octo pr list<cr>", { desc = "List github pull requests", silent = true })
+vim.keymap.set("n", "<leader>prc", ":Octo pr create<cr>", { desc = "Create github pull requests", silent = true })
