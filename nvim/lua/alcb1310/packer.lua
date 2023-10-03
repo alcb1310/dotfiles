@@ -71,6 +71,15 @@ return require('packer').startup(function(use)
           requires = { "nvim-lua/plenary.nvim" },
      }
 
+     use {
+          'pwntester/octo.nvim',
+          requires = {
+               'nvim-lua/plenary.nvim',
+               'nvim-telescope/telescope.nvim',
+               'nvim-tree/nvim-web-devicons',
+          }
+     }
+
      -- Automatically set up your configuration after cloning packer.nvim
      -- Put this at the end after all plugins
      if packer_bootstrap then
