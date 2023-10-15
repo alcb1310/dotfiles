@@ -23,3 +23,6 @@ keymap.set("v", ">", ">gv", {desc="add indentation"})
 
 -- Buffers
 keymap.set("n", "<leader>bc", ":bd<cr>", {desc = "buffer close", noremap=true, silent=true})
+
+-- Source init.lua file
+keymap.set("n", "<leader><leader>", ":so ~/.config/nvim/init.lua<cr>", {desc="source config files", noremap=true, silent=true})
