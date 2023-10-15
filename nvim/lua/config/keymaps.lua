@@ -16,3 +16,10 @@ keymap.set("n", "<C-l>", "<C-w>l>", {desc="Go to right pane", noremap=true, sile
 -- Window Management
 keymap.set("n", "<leader>sv", ":vsplit<cr>", {desc="split vertically", noremap=true, silent=true})
 keymap.set("n", "<leader>sh", ":split<cr>", {desc="split horizontally", noremap=true, silent=true})
+
+-- Indent
+keymap.set("v", "<", "<gv", {desc="remove indentation"})
+keymap.set("v", ">", ">gv", {desc="add indentation"})
+
+-- Buffers
+keymap.set("n", "<leader>bc", ":bd<cr>", {desc = "buffer close", noremap=true, silent=true})
