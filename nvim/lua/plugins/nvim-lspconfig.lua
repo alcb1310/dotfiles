@@ -1,28 +1,16 @@
 local config = function()
 	require("neoconf").setup({})
+	local cmp_nvim_lsp = require("cmp_nvim_lsp")
 
 	local lspconfig = require("lspconfig")
+	local on_attach = require("util.lsp").on_attach
 
-	-- enable keybinds only for when lsp server available
-	local on_attach = function(_, bufnr)
-		-- keybind options
-		local opts = { noremap = true, silent = true, buffer = bufnr }
-
-		vim.keymap.set("n", "<leader>gf", "<cmd>Lspsaga lsp_finder<cr>", opts)
-		vim.keymap.set("n", "<leader>gD", "<cmd>lua vim.lsp.buf.declaration()<cr>", opts)
-		vim.keymap.set("n", "<leader>gd", "<cmd>Lspsaga goto_definition<cr>", opts)
-		vim.keymap.set("n", "<leader>vca", "<cmd>Lspsaga code_action<cr>", opts)
-		vim.keymap.set("n", "<leader>vrn", "<cmd>Lspsaga rename<cr>", opts)
-		vim.keymap.set("n", "<leader>D", "<cmd>Lspsaga show_line_diagnostic<cr>", opts)
-		vim.keymap.set("n", "<leader>d", "<cmd>Lspsaga show_cursor_diagnostic<cr>", opts)
-		vim.keymap.set("n", "<leader>pd", "<cmd>Lspsaga diagnostic_jump_prev<cr>", opts)
-		vim.keymap.set("n", "<leader>nd", "<cmd>Lspsaga diagnostic_jump_next<cr>", opts)
-		vim.keymap.set("n", "K", "<cmd>Lspsaga hover_doc<cr>", opts)
-	end
+	-- Set up lspconfig.
+    local capabilities = cmp_nvim_lsp.default_capabilities()
 
 	-- lua
 	lspconfig.lua_ls.setup({
-		-- capabilities = capabilities,
+		capabilities = capabilities,
 		on_attach = on_attach,
 		settings = { -- custom settings for lua
 			Lua = {
@@ -33,8 +21,8 @@ local config = function()
 				workspace = {
 					-- make language server aware of runtime files
 					library = {
-                            [vim.fn.expand("$VIMRUNTIME/lua")] = true,
-                            [vim.fn.stdpath("config") .. "/lua"] = true,
+						[vim.fn.expand("$VIMRUNTIME/lua")] = true,
+						[vim.fn.stdpath("config") .. "/lua"] = true,
 					},
 				},
 			},
