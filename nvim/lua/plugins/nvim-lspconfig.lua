@@ -39,18 +39,29 @@ local config = function()
 		},
 		staticcheck = true,
 		gofumpt = true,
+		root_dir = lspconfig.util.root_pattern("go.work", "go.mod", ".git"),
+	})
+
+	lspconfig.tsserver.setup({
+		on_attach = on_attach,
+		capabilities = capabilities,
+		filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx" },
+		root_dir = lspconfig.util.root_pattern("package.json", "tsconfig.json", "jsconfig.json", ".git"),
 	})
 
 	local luacheck = require("efmls-configs.linters.luacheck")
 	local stylua = require("efmls-configs.formatters.stylua")
 	local gofumpt = require("efmls-configs.formatters.gofumpt")
 	local goimports = require("efmls-configs.formatters.goimports")
+	local eslint_d = require("efmls-configs.linters.eslint_d")
+	local prettierd = require("efmls-configs.formatters.prettier_d")
 
 	-- configure efm server
 	lspconfig.efm.setup({
 		filetypes = {
 			"lua",
 			"go",
+			"typescript",
 		},
 		init_options = {
 			documentFormatting = true,
@@ -64,6 +75,7 @@ local config = function()
 			languages = {
 				lua = { luacheck, stylua },
 				go = { gofumpt, goimports },
+				typescript = { eslint_d, prettierd },
 			},
 		},
 	})
