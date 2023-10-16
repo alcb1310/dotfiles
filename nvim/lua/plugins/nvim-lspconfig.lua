@@ -6,7 +6,7 @@ local config = function()
 	local on_attach = require("util.lsp").on_attach
 
 	-- Set up lspconfig.
-    local capabilities = cmp_nvim_lsp.default_capabilities()
+	local capabilities = cmp_nvim_lsp.default_capabilities()
 
 	-- lua
 	lspconfig.lua_ls.setup({
@@ -29,13 +29,28 @@ local config = function()
 		},
 	})
 
+	lspconfig.gopls.setup({
+		capabilities = capabilities,
+		on_attach = on_attach,
+		filetypes = { "go", "gomod", "gowork", "gotmpl" },
+		single_file_support = true,
+		analyses = {
+			unusedparams = true,
+		},
+		staticcheck = true,
+		gofumpt = true,
+	})
+
 	local luacheck = require("efmls-configs.linters.luacheck")
 	local stylua = require("efmls-configs.formatters.stylua")
+	local gofumpt = require("efmls-configs.formatters.gofumpt")
+	local goimports = require("efmls-configs.formatters.goimports")
 
 	-- configure efm server
 	lspconfig.efm.setup({
 		filetypes = {
 			"lua",
+			"go",
 		},
 		init_options = {
 			documentFormatting = true,
@@ -48,6 +63,7 @@ local config = function()
 		settings = {
 			languages = {
 				lua = { luacheck, stylua },
+				go = { gofumpt, goimports },
 			},
 		},
 	})
