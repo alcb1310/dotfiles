@@ -24,6 +24,9 @@ lsp.ensure_installed({
      'gopls',
      'prismals',
      'clangd',
+     'html',
+     'tailwindcss',
+     'emmet_language_server',
 })
 
 -- Fix Undefined global 'vim'
