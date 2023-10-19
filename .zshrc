@@ -108,6 +108,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vim=nvim
+alias air="$HOME/go/bin/air"
+
 export PATH="$HOME/.tmux/plugins/tmuxifier/bin:$PATH"
 export EDITOR=nvim
 export NODE_ENV='development'
