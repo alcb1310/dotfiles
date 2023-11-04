@@ -1,6 +1,6 @@
 require('caret').setup({
      options = {
-          transparent = true,     -- Set to true to disable background setting
+          transparent = false,    -- Set to true to disable background setting
           inverted_signs = false, -- Controls inverted Signcolumn highlighting
           styles = {              -- Define styles for various syntax groups
                bold = true,
