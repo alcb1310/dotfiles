@@ -51,3 +51,6 @@ vim.api.nvim_set_keymap("n", "<leader>ut", lua_command, { silent = true })
 
 vim.keymap.set({ "n", "v", "i" }, "<A-v>", vim.cmd.vsplit, {})
 vim.keymap.set({ "n", "v", "i" }, "<A-s>", vim.cmd.split, {})
+
+vim.keymap.set("n", "gh", "<cmd>diffget //2<cr>")
+vim.keymap.set("n", "gj", "<cmd>diffget //3<cr>")
