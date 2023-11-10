@@ -142,6 +142,7 @@ export EDITOR='nvim'
 # alias ohmybash="mate ~/.oh-my-bash"
 # alias vim=nvim
 alias air='~/go/bin/air'
+alias tree="tree -I 'node_modules|.git'"
 export PATH="$HOME/.config/tmux/plugins/tmuxifier/bin:$PATH"
 
 # neofetch
