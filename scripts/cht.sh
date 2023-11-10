@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-selected=`cat ~/.dotfiles/scripts/languages ~/.dotfiles/scripts/utils | fzf`
+selected=`bat ~/.dotfiles/scripts/languages ~/.dotfiles/scripts/utils | fzf`
 if [[ -z $selected ]]; then
     exit 0
 fi

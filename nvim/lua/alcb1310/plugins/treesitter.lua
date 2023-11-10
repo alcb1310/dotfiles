@@ -5,6 +5,9 @@ local M = {
           ensure_installed = {
                'http',
                'json',
+               'vim',
+               'lua',
+               'bash'
           },
      },
 }
