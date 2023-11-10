@@ -111,9 +111,11 @@ alias vim=nvim
 alias air="$HOME/go/bin/air"
 
 export PATH="$HOME/.tmux/plugins/tmuxifier/bin:$PATH"
+export PATH="$HOME/go/bin/:$PATH"
 export EDITOR=nvim
 export NODE_ENV='development'
 export GOPATH="$HOME/go"
+export GOBIN="$HOME/go/bin/"
 
 eval "$(tmuxifier init -)"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
