@@ -141,9 +141,11 @@ export EDITOR='nvim'
 # alias bashconfig="mate ~/.bashrc"
 # alias ohmybash="mate ~/.oh-my-bash"
 # alias vim=nvim
-alias air='~/go/bin/air'
+# alias air='~/go/bin/air'
 alias tree="tree -I 'node_modules|.git'"
 export PATH="$HOME/.config/tmux/plugins/tmuxifier/bin:$PATH"
+export PATH="$HOME/go/bin:$PATH"
+export PATH="$HOME/.dotfiles/scripts/:$PATH"
 
 # neofetch
 source /usr/share/nvm/init-nvm.sh
