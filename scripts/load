@@ -1,4 +1,13 @@
 #! /bin/bash
+# Author: Andres Court
+# Date: 2023-11-10
+# Description: Load a tmux session from tmuxifier
 
-sessions=`tmuxifier ls | fzf | cut -d ':' -f1`
-tmuxifier s $sessions
+sessions=`tmuxifier ls | fzf`
+
+if [[ -z $sessions ]]; then
+     echo "No session selected"
+     exit 1
+else
+     tmuxifier s $sessions
+fi
