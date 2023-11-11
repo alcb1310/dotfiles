@@ -1,0 +1,4 @@
+#! /bin/bash
+
+sessions=`tmuxifier ls | fzf | cut -d ':' -f1`
+tmuxifier s $sessions
