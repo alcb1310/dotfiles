@@ -6,5 +6,6 @@ if [[ -z $branch ]]; then
      echo "No branch selected"
      exit 1
 else
-     git checkout $branch
+     toCheckout=`echo $branch | sed "s/.* //" | sed "s#remotes/[^/]*/##"`
+     git checkout $toCheckout
 fi
