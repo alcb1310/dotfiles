@@ -3,7 +3,7 @@
 # Date: 2023-11-10
 # Description: Load a tmux session from tmuxifier
 
-sessions=`tmuxifier ls | fzf`
+sessions=`tmuxifier ls | fzf --reverse`
 
 if [[ -z $sessions ]]; then
      echo "No session selected"
