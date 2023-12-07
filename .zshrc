@@ -111,6 +111,7 @@ alias vim=nvim
 alias air="$HOME/go/bin/air"
 
 export PATH="$HOME/.tmux/plugins/tmuxifier/bin:$PATH"
+export PATH="$HOME/.dotfiles/scripts/:$PATH"
 export PATH="$HOME/go/bin/:$PATH"
 export EDITOR=nvim
 export NODE_ENV='development'
