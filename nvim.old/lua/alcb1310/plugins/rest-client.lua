@@ -1,4 +1,4 @@
-return {
+local M = {
      'rest-nvim/rest.nvim',
      dependencies = {
           'nvim-lua/plenary.nvim',
@@ -46,3 +46,5 @@ return {
      -- { "<leader>ut", "<cmd>RestRun<cr>", { silent = true } }
      -- }
 }
+
+return M

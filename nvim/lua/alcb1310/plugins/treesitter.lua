@@ -1,15 +1,17 @@
-local M = {
+return {
      'nvim-treesitter/nvim-treesitter',
      run = ':TSUpdate',
-     opts = {
-          ensure_installed = {
-               'http',
-               'json',
-               'vim',
-               'lua',
-               'bash'
-          },
-     },
-}
+     config = function()
+          require('nvim-treesitter.configs').setup {
+               ensure_installed = {
+                    'http',
+                    'json',
+                    'vim',
+                    'lua',
+                    'bash'
+               },
+          }
 
-return M
+          vim.treesitter.language.register('markdown', 'octo')
+     end,
+}

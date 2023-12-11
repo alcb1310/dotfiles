@@ -1,4 +1,4 @@
-return {
+local M = {
      'pwntester/octo.nvim',
      dependencies = {
           'nvim-lua/plenary.nvim',
@@ -168,3 +168,5 @@ return {
           { "<leader>O",   "<cmd>Octo<cr>",              { desc = "Octo", silent = true } },
      }
 }
+
+return M

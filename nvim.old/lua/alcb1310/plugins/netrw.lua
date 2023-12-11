@@ -1,5 +1,4 @@
--- Because using netrw doesn't mean I can not have nice things
-return {
+local M = {
      'prichrd/netrw.nvim',
      opts = {
           -- Put your configuration here, or leave the object empty to take the default
@@ -13,3 +12,5 @@ return {
           mappings = {}, -- Custom key mappings
      }
 }
+
+return M

@@ -1,43 +1,40 @@
-vim.opt.nu = true
-vim.opt.relativenumber = true
+local o = vim.opt
 
-vim.opt.cursorline = true
-vim.opt.cursorcolumn = true
+-- Configure line numbers
+o.relativenumber = true
+o.number = true
 
-vim.opt.mouse = ""
+o.termguicolors = true
+o.cursorline = true
+o.cursorcolumn = true
 
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 5
-vim.opt.expandtab = true
-vim.opt.smartindent = true
-vim.opt.autoindent = true
+o.tabstop = 4
+o.softtabstop = 4
+o.shiftwidth = 5
+o.expandtab = true
+o.smartindent = true
+o.autoindent = true
 
-vim.opt.showtabline = 0 -- No tab line
+o.showtabline = 0 -- No tab line
 
-vim.opt.wrap = false
+o.wrap = false
 
-vim.opt.swapfile = false
-vim.opt.backup = false
-vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
-vim.opt.undofile = true
+o.swapfile = false
+o.backup = false
+o.undodir = os.getenv("HOME") .. "/.vim/undodir"
+o.undofile = true
 
-vim.opt.hlsearch = false
-vim.opt.incsearch = true
+o.hlsearch = false
+o.incsearch = true
 
-vim.opt.termguicolors = true
+o.scrolloff = 8
+o.signcolumn = "yes"
+o.isfname:append("@-@")
 
-vim.opt.scrolloff = 8
-vim.opt.signcolumn = "yes"
-vim.opt.isfname:append("@-@")
+o.foldenable = false
 
-vim.opt.foldenable = false
+o.updatetime = 50
+o.colorcolumn = "80"
 
-vim.opt.updatetime = 50
-vim.opt.colorcolumn = "80"
-
--- vim.api.nvim_set_hl(0, "LineNr", { fg = "#a6d189", bg = "none" })
--- vim.api.nvim_set_hl(0, "LineNr", { fg = "#ca9ee6", bg = "none" })
-vim.api.nvim_set_hl(0, "LineNr", { fg = "#33aa55", bg = "none" })
 vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })

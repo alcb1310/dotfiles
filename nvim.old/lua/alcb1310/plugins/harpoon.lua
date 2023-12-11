@@ -1,4 +1,4 @@
-return {
+local M = {
      "theprimeagen/harpoon",
      branch = "harpoon2",
      config = function()
@@ -24,3 +24,5 @@ return {
           "<leader>t",
      }
 }
+
+return M

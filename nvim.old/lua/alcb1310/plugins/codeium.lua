@@ -1,4 +1,4 @@
-return {
+local M = {
      'Exafunction/codeium.vim',
      event = 'BufEnter',
      config = function()
@@ -9,3 +9,5 @@ return {
           vim.keymap.set('i', '<C-x>', function() return vim.fn['codeium#Clear']() end, { expr = true })
      end
 }
+
+return M
