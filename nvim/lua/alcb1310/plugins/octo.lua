@@ -6,7 +6,7 @@ return {
           'nvim-tree/nvim-web-devicons',
      },
      config = function()
-          require "octo".setup({
+          require("octo").setup({
                use_local_fs = false, -- use local files on right side of reviews
                enable_builtin = true, -- shows a list of builtin actions when no action is provided
                default_remote = { "upstream", "origin" }, -- order to try remotes
