@@ -3,21 +3,21 @@ return {
      branch = 'v2.x',
      dependencies = {
           -- LSP Support
-          {'neovim/nvim-lspconfig'},
-          {'williamboman/mason.nvim'},
-          {'williamboman/mason-lspconfig.nvim'},
+          { 'neovim/nvim-lspconfig' },
+          { 'williamboman/mason.nvim' },
+          { 'williamboman/mason-lspconfig.nvim' },
 
           -- Autocompletion
-          {'hrsh7th/nvim-cmp'},
-          {'hrsh7th/cmp-buffer'},
-          {'hrsh7th/cmp-path'},
-          {'saadparwaiz1/cmp_luasnip'},
-          {'hrsh7th/cmp-nvim-lsp'},
-          {'hrsh7th/cmp-nvim-lua'},
+          { 'hrsh7th/nvim-cmp' },
+          { 'hrsh7th/cmp-buffer' },
+          { 'hrsh7th/cmp-path' },
+          { 'saadparwaiz1/cmp_luasnip' },
+          { 'hrsh7th/cmp-nvim-lsp' },
+          { 'hrsh7th/cmp-nvim-lua' },
 
           -- Snippets
-          {'L3MON4D3/LuaSnip'},
-          {'rafamadriz/friendly-snippets'},
+          { 'L3MON4D3/LuaSnip' },
+          { 'rafamadriz/friendly-snippets' },
      },
      config = function()
           local lsp = require('lsp-zero')
@@ -46,6 +46,13 @@ return {
                'tailwindcss',
                'emmet_language_server',
                'cssls',
+               "templ",
+          })
+
+          vim.filetype.add({
+               extension = {
+                    templ = "templ",
+               },
           })
 
           -- Fix Undefined global 'vim'
@@ -74,7 +81,7 @@ return {
                }
           })
 
-          lsp.on_attach(function(client, bufnr)
+          lsp.on_attach(function(_, bufnr)
                local opts = { buffer = bufnr, remap = false }
 
                vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
@@ -90,6 +97,16 @@ return {
 
                lsp_format_on_save(bufnr)
           end)
+
+          -- local configs = require('lspconfig.configs')
+          -- configs.templ = {
+               -- default_config = {
+                    -- cmd = { "templ", "lsp", "-http=localhost:7474", "-log=~/tmp/templ.log" },
+                    -- filetypes = { 'templ' },
+                    -- root_dir = lsp.util.root_pattern("go.mod", ".git"),
+                    -- settings = {},
+               -- },
+          -- }
 
           lsp.setup_servers({ 'tsserver', 'eslint', 'gopls', 'cssls' })
 
