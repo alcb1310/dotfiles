@@ -8,7 +8,12 @@ return {
                     'json',
                     'vim',
                     'lua',
-                    'bash'
+                    'bash',
+                    "templ",
+               },
+               highlight = {
+                    enable = true,
+                    additional_vim_regex_highlighting = false,
                },
           }
 
