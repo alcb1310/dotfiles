@@ -21,6 +21,7 @@ return {
      },
      config = function()
           local lsp = require('lsp-zero')
+          local lspconfig = require('lspconfig')
           local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
           lsp.preset('recommended')
@@ -48,6 +49,17 @@ return {
                'cssls',
                "templ",
           })
+
+          lspconfig.tailwindcss.setup({
+               filetypes = { "html", "css", "scss", "javascript", "javascriptreact", "typescript", "typescriptreact", "templ" },
+               init_options = {
+                    userLanguages = {
+                         templ = "html",
+                    }
+               }
+          })
+
+          lspconfig.htmx.setup({})
 
           vim.filetype.add({
                extension = {
@@ -97,16 +109,6 @@ return {
 
                lsp_format_on_save(bufnr)
           end)
-
-          -- local configs = require('lspconfig.configs')
-          -- configs.templ = {
-               -- default_config = {
-                    -- cmd = { "templ", "lsp", "-http=localhost:7474", "-log=~/tmp/templ.log" },
-                    -- filetypes = { 'templ' },
-                    -- root_dir = lsp.util.root_pattern("go.mod", ".git"),
-                    -- settings = {},
-               -- },
-          -- }
 
           lsp.setup_servers({ 'tsserver', 'eslint', 'gopls', 'cssls' })
 

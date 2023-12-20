@@ -149,3 +149,4 @@ export PATH="$HOME/.dotfiles/scripts/:$PATH"
 
 # neofetch
 source /usr/share/nvm/init-nvm.sh
+. "$HOME/.cargo/env"
