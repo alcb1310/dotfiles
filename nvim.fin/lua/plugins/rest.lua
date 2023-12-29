@@ -3,6 +3,7 @@ return {
      dependencies = {
           'nvim-lua/plenary.nvim',
      },
+     filetype = { 'http' },
      config = function()
           require("rest-nvim").setup({
                -- Open request results in a horizontal split

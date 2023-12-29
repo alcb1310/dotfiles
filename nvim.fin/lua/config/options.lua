@@ -1,12 +1,9 @@
+vim.g.mapleader = " "
+
 local o = vim.opt
 
--- Configure line numbers
-o.relativenumber = true
 o.number = true
-
-o.termguicolors = true
-o.cursorline = true
-o.cursorcolumn = true
+o.relativenumber = true
 
 o.tabstop = 4
 o.softtabstop = 4
@@ -38,3 +35,6 @@ o.colorcolumn = "80"
 
 vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+
+o.termguicolors = true
+o.cursorline = true

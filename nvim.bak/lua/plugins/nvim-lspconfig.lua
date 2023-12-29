@@ -87,6 +87,13 @@ local config = function()
 		filetypes = { "sql" },
 	})
 
+    -- clangd
+    lspconfig.clangd.setup({
+        on_attach = on_attach,
+        capabilities = capabilities,
+        filetypes = { "c", "cpp", "objc", "objcpp" },
+    })
+
 	local luacheck = require("efmls-configs.linters.luacheck")
 	local stylua = require("efmls-configs.formatters.stylua")
 	-- local goimports = require("efmls-configs.linters.goimports-reviser")

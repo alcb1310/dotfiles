@@ -1,6 +1,8 @@
 return {
      'VonHeikemen/lsp-zero.nvim',
      branch = 'v2.x',
+     lazy = true,
+     event = "InsertEnter",
      dependencies = {
           -- LSP Support
           { 'neovim/nvim-lspconfig' },
@@ -86,10 +88,10 @@ return {
           lsp.set_preferences({
                suggest_lsp_servers = false,
                sign_icons = {
-                    error = 'E',
-                    warn = 'W',
-                    hint = 'H',
-                    info = 'I'
+                    error = "",
+                    warn = "",
+                    hint = "",
+                    info = "",
                }
           })
 

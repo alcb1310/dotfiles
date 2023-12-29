@@ -11,6 +11,18 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-local opts = {}
+local opts = {
+     install = {
+          colorscheme = { "caret" },
+     },
+     defaults = {
+          lazy = false,
+     },
+     rip = {
+          change_detection = {
+               notify = false,
+          }
+     }
+}
 
 require("lazy").setup("alcb1310.plugins", opts)
