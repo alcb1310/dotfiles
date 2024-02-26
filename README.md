@@ -35,7 +35,8 @@ sudo pacman -S stow
 First checkout the dotfiles repo in your $HOME directory using git
 
 ```bash
-git clone https://github.com/alcb1310/dfiles.git
+git clone https://github.com/alcb1310/dfiles.git dotfiles
+cd dotfiles
 ```
 
 then use GNU stow to create the symlinks
