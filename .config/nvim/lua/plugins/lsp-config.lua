@@ -1,54 +1,75 @@
 local servers = {
-    "lua_ls",
-    "tsserver",
-    "gopls",
-    "templ",
-    "emmet_ls",
+	"lua_ls",
+	"tsserver",
+	"gopls",
+	"templ",
+	"emmet_ls",
 }
 
 local on_attach = function(client, bufnr)
-    local augroup = vim.api.nvim_create-augroup("LspFormatting", {})
+	local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
-    if client.supports_method("textDocument/formatting") then
-        vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
-        vim.api.nvim_create_autocmd("BufWritePre", {
-            group = augroup,
-            buffer = bufnr,
-            callback = function()
-                vim.lsp.buf.format({ bufnr = bufnr })
-            end,
-        })
-    end
+	if client.supports_method("textDocument/formatting") then
+		vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
+		vim.api.nvim_create_autocmd("BufWritePre", {
+			group = augroup,
+			buffer = bufnr,
+			callback = function()
+				vim.lsp.buf.format({ bufnr = bufnr })
+			end,
+		})
+	end
 end
 
 return {
-    {
-        "williamboman/mason.nvim",
-        config = function()
-            require("mason").setup()
-        end,
-    },
-    {
-        "williamboman/mason-lspconfig.nvim",
-        config = function()
-            require("mason-lspconfig").setup({
-                ensure_installed = servers,
-            })
-        end,
-    },
-    {
-        "neovim/nvim-lspconfig",
-        config = function()
-            local lspconfig = require("lspconfig")
-            local capabilities = require("cmp_nvim_lsp").default_capabilities()
+	{
+		"williamboman/mason.nvim",
+		config = function()
+			require("mason").setup()
+		end,
+	},
+	{
+		"williamboman/mason-lspconfig.nvim",
+		config = function()
+			require("mason-lspconfig").setup({
+				ensure_installed = servers,
+			})
+		end,
+	},
+	{
+		"neovim/nvim-lspconfig",
+		config = function()
+			local lspconfig = require("lspconfig")
+			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-            for _, lsp in ipairs(servers) do
-                lspconfig[lsp].setup({
-                    on_attach = on_attach,
-                    capabilities = capabilities,
-                })
-            end
-            
+			for _, lsp in ipairs(servers) do
+				lspconfig[lsp].setup({
+					on_attach = on_attach,
+					capabilities = capabilities,
+				})
+			end
+
+			lspconfig.tailwindcss.setup({
+				capabilities = capabilities,
+				on_attach = on_attach,
+				filetypes = {
+					"html",
+					"css",
+					"scss",
+					"javascript",
+					"javascriptreact",
+					"typescriptreact",
+					"svelte",
+					"vue",
+					"templ",
+				},
+				init_options = {
+					userLanguages = {
+						templ = "html",
+					},
+				},
+			})
+
 			vim.filetype.add({ extension = { templ = "templ" } })
 
 			local opts = {}
@@ -66,6 +87,6 @@ return {
 			vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
 			vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts)
 			vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
-        end,
-    },
+		end,
+	},
 }
