@@ -1,0 +1,7 @@
+{
+  "catpuccin": { "branch": "main", "commit": "c0de3b46811fe1ce3912e2245a9dfbea6b41c300" },
+  "codeium.vim": { "branch": "main", "commit": "9286586f790f837c4c3032f2124559936e77e6ed" },
+  "lazy.nvim": { "branch": "main", "commit": "28126922c9b54e35a192ac415788f202c3944c9f" },
+  "nvim-web-devicons": { "branch": "master", "commit": "0bb67ef952ea3eb7b1bac9c011281471d99a27bc" },
+  "oil.nvim": { "branch": "master", "commit": "132b4ea0740c417b9d717411cab4cf187e1fd095" }
+}
