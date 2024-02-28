@@ -14,6 +14,7 @@ return {
             k("n", "<leader>ff", builtin.find_files)
             k("n", "<leader>fg", builtin.live_grep)
             k("n", "<leader>fb", builtin.buffers)
+            k("n", "<C-g>", builtin.git_files)
         end,
     },
     {
