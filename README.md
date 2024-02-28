@@ -35,7 +35,7 @@ sudo pacman -S stow
 First checkout the dotfiles repo in your $HOME directory using git
 
 ```bash
-git clone https://github.com/alcb1310/dfiles.git dotfiles
+git clone https://github.com/alcb1310/dotfiles.git
 cd dotfiles
 ```
 
