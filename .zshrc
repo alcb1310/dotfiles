@@ -111,7 +111,7 @@ source $ZSH/oh-my-zsh.sh
 alias air="$HOME/go/bin/air"
 
 export PATH="$HOME/.config/tmux/plugins/tmuxifier/bin:$PATH"
-#export PATH="$HOME/.dotfiles/scripts/:$PATH"
+export PATH="$HOME/scripts/:$PATH"
 export PATH="$HOME/go/bin/:$PATH"
 export EDITOR=nvim
 export NODE_ENV='development'
