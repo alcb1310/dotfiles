@@ -1,8 +1,8 @@
 local k = vim.keymap.set
 
 k("n", "<leader>pv", ":Oil<CR>", { silent = true })
-k({"i", "v"}, "jk", "<Esc>", { silent = true })
-k({"i", "v"}, "kj", "<Esc>", { silent = true })
+k({ "i", "v" }, "jk", "<Esc>", { silent = true })
+k({ "i", "v" }, "kj", "<Esc>", { silent = true })
 
 vim.keymap.set("n", "<leader>bc", ":bd<CR>", {})
 
@@ -23,3 +23,4 @@ vim.keymap.set("x", "<leader>p", [["_dP]])
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
