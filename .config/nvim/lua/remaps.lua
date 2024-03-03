@@ -27,3 +27,6 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 vim.keymap.set("n", "√", ":vsplit<cr>", { silent = true })
 vim.keymap.set("n", "ß", ":split<cr>", { silent = true })
+
+vim.keymap.set("n", "<leader>tt", ":TodoTelescope<cr>", { silent = true })
+vim.keymap.set("n", "<leader>tx", ":TodoTrouble<cr>", { silent = true })
