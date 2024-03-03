@@ -1,9 +1,15 @@
+-- TODO: add appropriate languages
+-- FIX: htmx-lsp does not work
+
 local servers = {
 	"lua_ls",
 	"tsserver",
 	"gopls",
 	"templ",
 	"emmet_ls",
+	"tailwindcss",
+	"gopls",
+	"templ",
 }
 
 local on_attach = function(client, bufnr)
