@@ -1,5 +1,12 @@
 # My Dotfiles Configuration
 
+## Programs
+
+![Alacritty](https://img.shields.io/badge/alacritty-F46D01?style=for-the-badge&logo=alacritty&logoColor=white)
+![Neovim](https://img.shields.io/badge/NeoVim-%2357A143.svg?&style=for-the-badge&logo=neovim&logoColor=white)
+![Tmux](https://img.shields.io/badge/tmux-1BB91F?style=for-the-badge&logo=tmux&logoColor=white)
+![ZSH](https://img.shields.io/badge/zsh-2ECC71?style=for-the-badge&logo=ZSH&logoColor=white)
+
 ## Requirements
 
 Ensure you have the followin installed on your system
