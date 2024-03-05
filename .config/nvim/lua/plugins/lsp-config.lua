@@ -80,6 +80,11 @@ return {
                 })
             end
 
+            lspconfig.htmx.setup({
+                on_attach = on_attach,
+                capabilities = capabilities,
+            })
+
             lspconfig.tailwindcss.setup({
                 capabilities = capabilities,
                 on_attach = on_attach,
