@@ -11,6 +11,48 @@
 
 Ensure you have the followin installed on your system
 
+### Alacritty
+
+On a Mac computer you should run:
+
+```bash
+brew install --cask alacritty
+```
+
+On a Archlinux installation you should run:
+
+```bash
+sudo pacman -S alacritty
+```
+
+### Neovim
+
+On a Mac computer you should run:
+
+```bash
+brew install neovim
+```
+
+On a Archlinux installation you should run:
+
+```bash
+sudo pacman -S neovim
+```
+
+### Tmux
+
+On a Mac computer you should run:
+
+```bash
+brew install tmux
+```
+
+On a Archlinux installation you should run:
+
+```bash
+sudo pacman -S tmux
+```
+
 ### Git
 
 On a Mac computer you should run:
