@@ -30,3 +30,5 @@ vim.keymap.set("n", "ß", ":split<cr>", { silent = true })
 
 vim.keymap.set("n", "<leader>tt", ":TodoTelescope<cr>", { silent = true })
 vim.keymap.set("n", "<leader>tx", ":TodoTrouble<cr>", { silent = true })
+
+vim.keymap.set("v", "S", ":'<,'>Silicon<CR>", {}) -- { silent = true })
