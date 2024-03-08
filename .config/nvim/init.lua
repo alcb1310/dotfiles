@@ -3,6 +3,7 @@ vim.g.mapleader = " " -- Defines mapleader to be the space, is always good to ha
 -- load remaps and options
 require("vim-options")
 require("remaps")
+require("autocommand")
 
 -- Lazy git package manager installation
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
