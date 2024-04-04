@@ -106,13 +106,20 @@ source $ZSH/oh-my-zsh.sh
 #
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-#alias vim=nvim
+# alias ohmyzsh="nvim ~/.oh-my-zsh"
+# ALIASES
 alias air="$HOME/go/bin/air"
+alias vim=nvim
+alias c="clear"
 
+# PATH exports
+export PATH="$PATH:$HOME/neovim/bin"
 export PATH="$HOME/.config/tmux/plugins/tmuxifier/bin:$PATH"
 export PATH="$HOME/scripts/:$PATH"
 export PATH="$HOME/go/bin/:$PATH"
+export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
+
+# ENVIRONMENT variables
 export EDITOR=nvim
 export NODE_ENV='development'
 export GOPATH="$HOME/go"
@@ -122,6 +129,7 @@ eval "$(tmuxifier init -)"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
 
 eval "$(zoxide init --cmd cd zsh)"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
