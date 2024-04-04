@@ -1,25 +1,25 @@
 return {
-    "nvim-treesitter/nvim-treesitter",
-    build = ":TSUpdate",
-    config = function()
-        require("nvim-treesitter.configs").setup({
-            ensure_installed = {
-                "lua",
-                "vim",
-                "vimdoc",
-                "javascript",
-                "html",
-                "typescript",
-                "go",
-                "gomod",
-                "gosum",
-                "templ",
-                "json",
-                "http",
-            },
-            auto_install = true,
-            highlight = { enable = true },
-            indent = { enable = true },
-        })
-    end,
+  "nvim-treesitter/nvim-treesitter",
+  lazy = false,
+  build = ":TSUpdate",
+  opts = {
+    -- A list of parser names, or "all" (the five listed parsers should always be installed)
+    ensure_installed = {
+      "lua",
+      "vim",
+      "vimdoc",
+      "json",
+    },
+
+    -- Install parsers synchronously (only applied to `ensure_installed`)
+    sync_install = false,
+    auto_install = true,
+
+    highlight = {
+      enable = true,
+    },
+  },
+  config = function(_, opts)
+    require("nvim-treesitter.configs").setup(opts)
+  end,
 }
