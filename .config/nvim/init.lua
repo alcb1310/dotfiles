@@ -116,6 +116,7 @@ vim.keymap.set(
 vim.keymap.set("n", "<a-v>", ":vsplit<CR>", { silent = true, desc = "Open vertical split" })
 vim.keymap.set("n", "<a-h>", ":split<CR>", { silent = true, desc = "Open horizontal split" })
 vim.keymap.set("n", "<a-x>", ":close<CR>", { silent = true, desc = "Close a split" })
+
 vim.keymap.set("n", "<leader>g", ":LazyGit<CR>", { silent = true, desc = "Open lazygit" })
 
 vim.keymap.set("n", "bc", ":bdelete<CR>", { silent = true, desc = "Close the current buffer" })
@@ -173,6 +174,9 @@ local opts = {
   defaults = {
     lazy = true, -- lazy load all the plugins by default
   },
+  change_detection = {
+    notify = false,
+  }
 }
 
 -- will load all the plugins defined inside the /lua/plugins directory
