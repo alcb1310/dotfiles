@@ -113,6 +113,9 @@ vim.keymap.set(
   { silent = true, desc = "Search and replace word under cursor" }
 )
 
+vim.keymap.set("n", "<a-v>", ":vsplit<CR>", { silent = true, desc = "Open vertical split" })
+vim.keymap.set("n", "<a-h>", ":split<CR>", { silent = true, desc = "Open horizontal split" })
+vim.keymap.set("n", "<a-x>", ":close<CR>", { silent = true, desc = "Close a split" })
 vim.keymap.set("n", "<leader>g", ":LazyGit<CR>", { silent = true, desc = "Open lazygit" })
 
 vim.keymap.set("n", "bc", ":bdelete<CR>", { silent = true, desc = "Close the current buffer" })
