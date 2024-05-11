@@ -110,7 +110,11 @@ source $ZSH/oh-my-zsh.sh
 # ALIASES
 alias air="$HOME/go/bin/air"
 alias vim=nvim
+alias typecraft="NVIM_APPNAME=typecraft nvim"
+alias kickstart="NVIM_APPNAME=kickstart nvim"
 alias c="clear"
+alias cover="go clean -testcache && go test ./... -coverprofile=coverage.out && go tool cover -html=coverage.out"
+alias fshow="~/scripts/fshow.sh"
 
 # PATH exports
 export PATH="$PATH:$HOME/neovim/bin"
@@ -124,12 +128,22 @@ export EDITOR=nvim
 export NODE_ENV='development'
 export GOPATH="$HOME/go"
 export GOBIN="$HOME/go/bin/"
-
-eval "$(tmuxifier init -)"
+export PGDATA="/opt/homebrew/var/postgresql@16"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+eval "$(tmuxifier init -)"
 eval "$(zoxide init --cmd cd zsh)"
+eval "$(fzf --zsh)"
+
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# pnpm
+export PNPM_HOME="/Users/andres/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
