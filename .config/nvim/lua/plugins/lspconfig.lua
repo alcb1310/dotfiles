@@ -76,13 +76,13 @@ return {
         vim.filetype.add({ extension = { templ = "templ" } })
 
         vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float)
-        vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
-        vim.keymap.set("n", "]d", vim.diagnostic.goto_next)
+        vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous diagnostic" })
+        vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next diagnostic" })
         vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist)
 
         vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { desc = "Go to declaration" })
         vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition" })
-        vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
+        vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Show definition" })
         vim.keymap.set("n", "gi", vim.lsp.buf.implementation, { desc = "Go to implementation" })
         vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, { desc = "Get signature help" })
         vim.keymap.set("n", "<leader>wa", vim.lsp.buf.add_workspace_folder, {})
@@ -94,6 +94,7 @@ return {
         vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "Rename" })
         vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, { desc = "Show code actions" })
         vim.keymap.set("n", "gr", vim.lsp.buf.references, { desc = "Go to references" })
+        vim.keymap.set("n", "<leader>lf", function() vim.lsp.buf.format() end, { desc = "Format" })
     end,
     dependencies = {
         "nvim-treesitter/nvim-treesitter",
