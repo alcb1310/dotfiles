@@ -7,6 +7,9 @@ keymap.set("v", "J", ":m '>+1<CR>gv=gv", { silent = true, desc = "Move selected 
 keymap.set("v", "K", ":m '<-2<CR>gv=gv", { silent = true, desc = "Move selected line down" })
 
 wk.register({
+    e = {
+        "iif err != nil {<esc><cr>i}<esc>Oreturn err", "errors"
+    },
     f = {
         name = "Find",
         f = { builtin.find_files, "Files" },
@@ -63,6 +66,7 @@ opts = { noremap = true, silent = true, prefix = "<leader>", mode = "v" }
 
 wk.register({
     y = { '"+y', "Yank to system clipboard" },
+    S = { ":Silicon<CR>", "Open silicon" },
 }, opts)
 
 opts = { noremap = true, silent = true, prefix = "", mode = "n" }

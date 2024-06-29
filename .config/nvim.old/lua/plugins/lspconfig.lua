@@ -6,6 +6,7 @@ local servers = {
     "tailwindcss",
     "astro",
     "volar",
+    "clangd",
 }
 
 local on_attach = function(client, bufnr)

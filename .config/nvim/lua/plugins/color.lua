@@ -1,32 +1,66 @@
 return {
-    {
-        'projekt0n/caret.nvim',
-        lazy = false,    -- make sure we load this during startup if it is your main colorscheme
-        priority = 1000, -- make sure to load this before all the other start plugins
-        opts = {
-            options = {
-                transparent = true,
-            }
-        },
-        config = function(_, opts)
-            require('caret').setup(opts)
-            vim.cmd('colorscheme caret')
-        end,
-    },
-    {
-        'rose-pine/neovim',
-        name = 'rose-pine',
-        lazy = false,
-        -- priority = 1000,
-        opts = {
-            dark_variant = "main",
-            styles = {
-                transparency = true,
-            },
-        },
-        config = function(_, opts)
-            require('rose-pine').setup(opts)
-            -- vim.cmd('colorscheme rose-pine')
-        end,
-    }
+	{
+		"maxmx03/dracula.nvim",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			local dracula = require("dracula")
+
+			dracula.setup({
+				transparent = true,
+				on_colors = function(colors, color)
+					return {
+						-- override or create new colors
+						mycolor = "#ffffff",
+					}
+				end,
+				on_highlights = function(colors, color)
+					return {
+						Normal = { fg = colors.mycolor },
+					}
+				end,
+				plugins = {
+					["nvim-treesitter"] = true,
+					["nvim-lspconfig"] = true,
+					["nvim-navic"] = true,
+					["nvim-cmp"] = true,
+					["indent-blankline.nvim"] = true,
+					["neo-tree.nvim"] = true,
+					["nvim-tree.lua"] = true,
+					["which-key.nvim"] = true,
+					["dashboard-nvim"] = true,
+					["gitsigns.nvim"] = true,
+					["neogit"] = true,
+					["todo-comments.nvim"] = true,
+					["lazy.nvim"] = true,
+					["telescope.nvim"] = true,
+					["noice.nvim"] = true,
+					["hop.nvim"] = true,
+					["mini.statusline"] = true,
+					["mini.tabline"] = true,
+					["mini.starter"] = true,
+					["mini.cursorword"] = true,
+				},
+			})
+		end,
+	},
+	{
+		"catppuccin/nvim",
+		name = "catppuccin",
+		priority = 1000,
+		opts = {
+			transparent_background = false,
+			integrations = {
+				cmp = true,
+				gitsigns = true,
+				nvimtree = true,
+				treesitter = true,
+				notify = false,
+				mini = {
+					enabled = true,
+					indentscope_color = "",
+				},
+			},
+		},
+	},
 }

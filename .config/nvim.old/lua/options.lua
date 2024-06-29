@@ -1,7 +1,7 @@
 local opt = vim.opt
 
-opt.number = true
-opt.relativenumber = true
+opt.number = true         -- This will display the line number in a file at the left of the text
+opt.relativenumber = true -- This will display numbers relative to the selected line allowing jumping between lines easier
 
 opt.cursorline = true     -- This will hightlight the line where the cursor is
 opt.cursorcolumn = true   -- This will highlight the column where the cursor is
@@ -34,3 +34,10 @@ vim.g.loaded_netrwPlugin = 1
 
 opt.mouse = "" -- Disable mouse support
 
+opt.foldmethod = "expr"
+opt.foldexpr = "nvim_treesitter#foldexpr()"
+opt.foldenable = false
+opt.foldlevel = 99
+opt.foldlevelstart = 99
+opt.foldcolumn = "0"
+opt.foldtext = ""
