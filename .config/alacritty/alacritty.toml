@@ -18,7 +18,7 @@ style = "Regular"
 decorations = "None"
 startup_mode = "Maximized"
 option_as_alt = "OnlyLeft"
-opacity = 0.8
+opacity = 0.92
 
 [window.padding]
 x = 5
@@ -26,3 +26,6 @@ y = 5
 
 [mouse]
 hide_when_typing = true
+
+# [shell]
+#   program= "/bin/zsh"

@@ -1,5 +1,5 @@
 [default_session]
-startup_command = "nvim -c ':Telescope find_files'"
+startup_command = "nvim"
 
 [[session]]
 name="tmux config"
@@ -17,6 +17,6 @@ path="~/dotfiles/.config/nvim"
 startup_command="nvim -c ':Telescope find_files'"
 
 [[session]]
-name="tmuxifier config"
-path="~/dotfiles/.config/tmux/plugins/tmuxifier/layouts"
+name="budget control application"
+path="~/go/src/github.com/alcb130/bca/master"
 startup_command="nvim -c ':Telescope find_files'"

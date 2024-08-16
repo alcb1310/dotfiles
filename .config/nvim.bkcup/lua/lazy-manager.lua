@@ -12,9 +12,10 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local opts = {
-    change_detection = {
-        notify = false,
-    },
+	change_detection = {
+		notify = false,
+	},
 }
 
 require("lazy").setup("plugins", opts)
+vim.filetype.add({ extension = { templ = "templ" } })

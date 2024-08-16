@@ -14,7 +14,7 @@ end
 alias la 'ls -al'
 alias c 'clear'
 #alias vim 'nvim'
-alias nvichad="NVIM_APPNAME=nvchad nvim"
+alias nvchad="NVIM_APPNAME=nvchad nvim"
 
 
 set PATH $PATH /opt/homebrew/opt/postgresql@16/bin
@@ -40,8 +40,19 @@ set PATH $PATH /Users/andres/.config/tmux/plugins/tmuxifier/bin
 set PATH $PATH /opt/homebrew/bin
 set PATH $PATH /opt/homebrew/sbin
 set PATH $PATH /opt/homebrew/opt/fzf/bin
+set PATH $PATH /Users/andres/.local/bin
 
 set -x GOPATH $HOME/go
 set -x PATH $PATH $GOPATH/bin
 
 zoxide init --cmd cd fish | source
+
+# pnpm
+set -gx PNPM_HOME "/Users/andres/Library/pnpm"
+if not string match -q -- $PNPM_HOME $PATH
+  set -gx PATH "$PNPM_HOME" $PATH
+end
+# pnpm end
+
+# fzf
+fzf --fish | source

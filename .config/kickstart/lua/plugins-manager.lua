@@ -18,11 +18,7 @@ vim.opt.rtp:prepend(lazypath)
 --    :Lazy update
 --
 -- NOTE: Here is where you install your plugins.
-require("lazy").setup({
-  spec = {
-{ import = "plugins" },
-  }
-}, {
+local opts = {
 	ui = {
 		-- If you are using a Nerd Font: set icons to an empty table which will use the
 		-- default lazy.nvim defined Nerd Font icons, otherwise define a unicode icons table
@@ -42,7 +38,5 @@ require("lazy").setup({
 			lazy = "💤 ",
 		},
 	},
-})
-
--- The line beneath this is called `modeline`. See `:help modeline`
--- vim: ts=2 sts=2 sw=2 et
+}
+require("lazy").setup("plugins", opts)
