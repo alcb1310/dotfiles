@@ -1,6 +1,7 @@
 local servers = {
 	"lua_ls",
-	"tsserver",
+	"clangd",
+	"ts_ls",
 	"gopls",
 	"cmake",
 	"templ",
