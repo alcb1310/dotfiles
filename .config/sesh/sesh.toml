@@ -1,22 +1,30 @@
 [default_session]
-startup_command = "nvim"
+startup_command = "aa"
 
 [[session]]
 name="tmux config"
 path="~/dotfiles/.config/tmux"
-startup_command="nvim tmux.conf"
+startup_command="aa tmux.conf"
 
 [[session]]
 name="sesh config"
 path="~/dotfiles/.config/sesh"
-startup_command="nvim sesh.toml"
+startup_command="aa sesh.toml"
 
 [[session]]
 name="neovim config"
-path="~/dotfiles/.config/nvim"
-startup_command="nvim -c ':Telescope find_files'"
+path="~/dotfiles/.config/aa"
+startup_command="aa -c ':Telescope find_files'"
 
 [[session]]
-name="budget control application"
-path="~/go/src/github.com/alcb130/bca/master"
-startup_command="nvim -c ':Telescope find_files'"
+name="home"
+path="~"
+startup_command="ff"
+
+[[session]]
+name="BCABackend"
+startup_command="tmuxinator start tbca"
+
+[[session]]
+name="BCAFrontend"
+startup_command="tmuxinator start fba"

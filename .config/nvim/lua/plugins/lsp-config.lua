@@ -65,7 +65,7 @@ return {
 				end,
 			},
 		},
-		event = { "BufReadPost", "BufNewFile" },
+		event = { "bufreadpost", "bufnewfile" },
 		config = function()
 			vim.filetype.add({ extension = { templ = "templ" } })
 			local lspconfig = require("lspconfig")

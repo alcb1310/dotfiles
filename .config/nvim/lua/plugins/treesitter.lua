@@ -1,3 +1,4 @@
+-- TODO: add nvim-treesitter-textobjects
 return {
   {
     "nvim-treesitter/nvim-treesitter",
