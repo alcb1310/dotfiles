@@ -12,7 +12,7 @@
 		}
 	},
 	"clock": {
-		"timezone": "America/Denver",
+		"timezone": "America/Guayaquil",
 		"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
 		"format": "{:%d - %H:%M}"
 	},
@@ -35,6 +35,21 @@
 		"tooltip": false,
 		"on-click": "sh -c '(sleep 0.5s; hyprlock)' & disown",
 		"format": ""
+	},
+	"battery": {
+		"states": {
+			"good": 95,
+			"warning": 30,
+			"critical": 15
+		},
+		"format": "{capacity}% {icon}",
+		"format-full": "{capacity}% {icon}",
+		"format-charging": "{capacity}% ",
+		"format-plugged": "{capacity}% ",
+		"format-alt": "{time} {icon}",
+		// "format-good": "", // An empty format will hide the module
+		// "format-full": "",
+		"format-icons": ["", "", "", "", ""]
 	},
 	"later": {
 		"format": "<span class='icon'>{icon}</span> <span class='text'>{text}</span>"
