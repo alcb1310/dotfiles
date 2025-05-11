@@ -1,0 +1,33 @@
+#! /bin/bash
+
+tmux rename-window "editor"
+clear
+
+if [ -d "./.git" ]; then
+  tmux new-window -n "git"
+  clear
+  tmux send-key "git st" Enter
+fi
+
+if [ -f "./Makefile" ]; then
+  tmux new-window -n "server"
+  clear
+  tmux send-key "make watch" Enter
+
+  tmux new-window -n "database"
+  clear
+  tmux send-key "psql" Enter
+fi
+
+if [ -f "./pnpm-lock.yaml" ]; then
+  tmux new-window -n "server"
+  clear
+  tmux send-key "pnpm dev" Enter
+fi
+
+tmux new-window
+clear
+tmux send-key "fastfetch" Enter
+
+tmux select-window -t 1
+tmux send-key "nvim" Enter
