@@ -1,6 +1,8 @@
 
 export GOPATH="$HOME/go"
 
+export export MANPAGER='nvim +Man!'
+
 export EDITOR='nvim'
 
 export PATH="$GOPATH:$PATH"
