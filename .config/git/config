@@ -1,0 +1,36 @@
+[pull]
+	rebase = true
+[init]
+	defaultBranch = master
+[user]
+	name = Andres Court
+	email = andres@andrescourt.com
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[core]
+    editor = nvim
+[alias]
+	co = checkout
+	br = branch
+	c = commit -v
+	st = status -s
+    l = log --graph --oneline --decorate
+    l2 = log --graph --oneline --decorate -n 20
+    l3 = log --graph --oneline --decorate -n 30
+    l4 = log --graph --oneline --decorate -n 40
+    dw = diff --word-diff
+[fetch]
+    prune = true
+[diff]
+    algorithm = histogram
+    colorMoved = plain
+[merge]
+    conflictstyle = diff3
+[push]
+    followTags = true
+    autoSetupRemote = true
+    default = current
