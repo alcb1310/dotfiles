@@ -9,6 +9,8 @@ export GOPATH=$HOME/go
 # export PATH=$PATH:$HOME/neovim/bin
 export PATH=$PATH:$GOPATH/bin
 
+export EDITOR=nvim
+
 eval "$(zoxide init bash --cmd cd)"
 eval "$(fzf --bash)"
 
